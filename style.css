@@ -1,0 +1,136 @@
+.inter-fonts{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Sharing style  */
+.btn{
+    background: linear-gradient(135deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    padding: 12px 16px;
+    border-radius: 10000px;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+    border: none;
+}
+.menu-btn{
+    display: none;
+}
+.btn img{
+    margin-right: 5px;
+}
+.btn-1{
+    background-color: transparent;
+    padding: 12px 16px;
+    border-radius: 10000px;
+    font-size: 16px;
+    color: #00FF88;
+    font-weight: 600;
+    border: 1px solid #00FF88;
+    margin-left: 8px;
+
+}
+.btn-1 img{
+    margin-right: 5px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 200px;
+    background-color: #1A0B2E;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 32px;
+
+}
+
+.navbar ul a{
+   text-decoration: none; 
+   font-size: 1rem;
+   line-height: 120%;
+   color: #FFFFFF;
+
+}
+.navbar ul li{
+    list-style-type: none;
+}
+nav h2{
+    font-weight: 700;
+    color:#FFFFFF ;
+}
+#banner{
+    background-image: url(./assets/hero-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    min-height: 100vh;
+
+}
+.banner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 130px;
+}
+.banner-image{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.banner-image-1{
+    margin-top: 150px;
+    position: relative;
+    width: 300px;
+    z-index: 1;
+}
+.banner-image .image-2{
+    transform: translate(-50%,);
+    position: absolute;
+    z-index: 2;
+}
+.banner-content h2{
+    font-size: 3.75rem;
+    color: #FFFFFF;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.banner-content p{
+    font-size: 1rem;
+    opacity: 80%;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+/* main section  */
+main{
+    width: 75%;
+    max-width: 1200px;
+}
+
+
+/* Responsive Design  */
+@media screen and (max-width:576px){
+    .navbar{
+        display: none;
+    }
+    #banner{
+        max-width: 400px;
+    }
+    .banner-content{
+        max-width: 400px;
+    }
+}
