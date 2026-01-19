@@ -66,9 +66,16 @@ nav{
 .navbar ul li{
     list-style-type: none;
 }
-nav h2{
+nav h1{
+    font-size: 2rem;
     font-weight: 700;
     color:#FFFFFF ;
+}
+nav h1 span{
+    background: linear-gradient(#F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 #banner{
     background-image: url(./assets/hero-bg.png);
@@ -210,6 +217,35 @@ nav h2{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
+}
+.episodes-card{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #250D44;
+}
+.episodes-card iframe{
+    border-radius: 20px 20px 0 0;
+}
+.episodes-card h2{
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 12px;
+
+}
+.episodes-card p{
+    font-size: 1rem;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+.green-image p{
+    display: inline-flex;
+    color: #00FF88;
+    gap:10px;
+
 }
 
 
