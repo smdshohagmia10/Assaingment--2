@@ -368,7 +368,9 @@ footer {
 }
 
 .copyright-text {
+    color: #FFFFFF;
     font-size: 16px;
+    margin-bottom: 40px;
     opacity: 0.7;
 }
     /* Responsive   */
@@ -457,8 +459,6 @@ footer {
     .footer-title {
         font-size: 3rem;
     }
-    .copyright-text{
-        padding: 10px;
-    }
+    
 }
 
