@@ -10,21 +10,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Sharing style  */
 .btn{
-    background: linear-gradient(135deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    background: linear-gradient(#F7E93F 0%, #FB09B4 51%, #9100F8 100%);
     padding: 12px 16px;
     border-radius: 10000px;
     font-size: 16px;
-    color: #FFFFFF;
+    color:#FFFFFF;
     font-weight: 600;
-    border: none;
-}
-.menu-btn{
-    display: none;
-}
-.btn img{
-    margin-right: 5px;
+    border:none;
+    margin-left: 8px;
 }
 .btn-1{
     background-color: transparent;
@@ -40,42 +34,52 @@
 .btn-1 img{
     margin-right: 5px;
 }
+.menu {
+    display: none;
+}
+.btn:hover{
+    filter: brightness(1.20);
+    transition: 0.3s ease;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px 50px;
+}
+.nav-container a{
+    text-decoration: none;
+    color: #FFFFFF;
+    line-height: 120%;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+.navbar h1{
+    font-size: 2.75rem;
+    color: #FFFFFF;
+    font-weight:700;
+}
+.navbar h1 span{
+    background: linear-gradient(#F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 200px;
-    background-color: #1A0B2E;
+    gap: 70px;
 }
-.navbar ul{
+
+nav ul {
+    margin-right:80%;
     display: flex;
-    justify-content: space-between;
-    text-align: center;
-    gap: 32px;
-
-}
-
-.navbar ul a{
-   text-decoration: none; 
-   font-size: 1rem;
-   line-height: 120%;
-   color: #FFFFFF;
-
-}
-.navbar ul li{
-    list-style-type: none;
-}
-.navbar-title{
-    font-size: 2rem;
-    font-weight: 700;
-    color:#FFFFFF ;
-}
-.navbar-title span{
-    background: linear-gradient(#F7E93F 0%, #FB09B4 51%, #9100F8 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+    list-style: none;
+    gap: 20px;
 }
 #banner{
     background-image: url(./assets/hero-bg.png);
@@ -83,9 +87,20 @@ nav{
     background-size: cover;
     background-repeat: no-repeat;
     max-width: 100%;
-    min-height: 100vh;
-
+    min-height: 80vh;
 }
+.top{
+    color:#1A0B2E;
+    padding: 8px 16px;
+    border-radius: 1000px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+    transform: translateX(-100%) translateY(-300%);
+    background-color: #00FF88;
+}
+
 .banner-container{
     display: flex;
     flex-direction: column;
@@ -106,9 +121,29 @@ nav{
     z-index: 1;
 }
 .banner-image .image-2{
-    transform: translate(-50%,);
+    right: 45%;
     position: absolute;
     z-index: 2;
+}
+@keyframes simpleMove {
+    0% {
+        top: 50%;
+    }
+    50% {
+        top: 47%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+.banner-image .image-2 {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(30%, -50%);
+    z-index: 2;
+    animation: simpleMove 3s infinite ease-in-out;
 }
 .banner-content h2{
     font-size: 3.75rem;
@@ -298,6 +333,7 @@ footer {
 .footer-container {
     max-width: 1360px;
     width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -337,8 +373,29 @@ footer {
 }
     /* Responsive   */
 @media screen and (max-width: 576px) {
+    
+    nav {
+        display: none; 
+
+    }
+    .menu {
+        display: block; 
+    }
+    .navbar{
+        padding: 30px 0px;
+    }
+    .btn{
+        margin-bottom: 10px;
+    }
     #banner{
         min-height: auto;
+    }
+    .banner-image .image-1{
+        transform: translateX(13%);
+    }
+    .top{
+        transform:translateX(-15%) translateY(-100%);
+        font-size: 0.9rem;
     }
     .banner-image .image-1 {
         width: 200px; 
@@ -359,6 +416,7 @@ footer {
     }
     .about-content{
         grid-template-columns: repeat(2,1fr);
+        gap: 40px;
         padding: 10px;
     }
     .about-container h3{
@@ -391,15 +449,16 @@ footer {
         padding: 10px;
     }
     .host{
-        flex-direction:row;
+        flex-direction:column;
     }
-
-    
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
     }
     .footer-title {
         font-size: 3rem;
+    }
+    .copyright-text{
+        padding: 10px;
     }
 }
 
