@@ -66,12 +66,12 @@ nav{
 .navbar ul li{
     list-style-type: none;
 }
-nav h1{
+.navbar-title{
     font-size: 2rem;
     font-weight: 700;
     color:#FFFFFF ;
 }
-nav h1 span{
+.navbar-title span{
     background: linear-gradient(#F7E93F 0%, #FB09B4 51%, #9100F8 100%);
     color: transparent;
     -webkit-background-clip: text;
@@ -124,8 +124,8 @@ nav h1 span{
 }
 
 /* main section  */
-#about, #techwave, #episode{
-    padding: 50px 200px 120px 200px;
+#about, #techwave, #episode, #meet-host, .footer-section{
+    padding: 0px 200px 120px 200px;
     margin: 0 auto;
 }
 .about-container{
@@ -220,7 +220,7 @@ nav h1 span{
 }
 .episodes-card{
     max-width: 400px;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     border-radius: 20px;
     background-color: #250D44;
@@ -247,20 +247,159 @@ nav h1 span{
     gap:10px;
 
 }
+#meet-host h2{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+
+}
+.host{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    background-color: rgba(53, 17, 101, 0.4);
+    padding: 40px;
+}
+.host-content h3{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+.host-content p{
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.host-icon{
+    display: flex;
+    gap: 20px;
+}
+/* Footer  */
 
 
+.hide{
+    display: none;
+}
+footer {
+    background-image: url('./assets/footer-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 0px;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
 
+.footer-container {
+    max-width: 1360px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+.footer-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
 
-/* Responsive Design  */
-@media screen and (max-width:576px){
-    .navbar{
-        display: none;
-    }
+.footer-title span {
+    background: linear-gradient(#F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 744px;
+    margin-bottom: 32px;
+}
+
+.link-item {
+    /* display: flex; */
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.copyright-text {
+    font-size: 16px;
+    opacity: 0.7;
+}
+    /* Responsive   */
+@media screen and (max-width: 576px) {
     #banner{
-        max-width: 400px;
+        min-height: auto;
     }
-    .banner-content{
-        max-width: 400px;
+    .banner-image .image-1 {
+        width: 200px; 
+    }
+    .banner-content h2{
+        font-size: 2.5rem;
+    }
+    .banner-content p{
+        padding: 0 20px;
+    }
+
+    .banner-image .image-2 {
+        width: 60px;
+    }
+
+    #about{
+        padding: 10px;
+    }
+    .about-content{
+        grid-template-columns: repeat(2,1fr);
+        padding: 10px;
+    }
+    .about-container h3{
+        font-size: 2rem;
+    }
+
+    #techwave{
+        padding: 10px;
+    }
+    .techwave-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    #techwave h2{
+        font-size: 2.5rem;
+        padding: 10px;
+    }
+    #episode{
+        padding: 10px;
+    }
+    .episodes-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    }
+    .title{
+        font-size: 3rem;
+    }
+
+    #meet-host{
+        padding: 10px;
+    }
+    .host{
+        flex-direction:row;
+    }
+
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-title {
+        font-size: 3rem;
     }
 }
+
