@@ -337,6 +337,7 @@ footer {
 }
 
 .footer-title {
+    color: #FFFFFF;
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -346,7 +347,7 @@ footer {
     background: linear-gradient(#F7E93F 0%, #FB09B4 51%, #9100F8 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color:transparent
 }
 .footer-links {
     display: grid;
@@ -356,11 +357,14 @@ footer {
 }
 
 .link-item {
-    /* display: flex; */
+    color: #FFFFFF;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     font-size: 16px;
     margin-bottom: 16px;
+}
+.link-item img{
+    margin-right: 5px;
 }
 
 .copyright-text {
